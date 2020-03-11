@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"hash/crc32"
 
-	database "github.com/p9c/blockdb"
 	log "github.com/p9c/logi"
+
+	database "github.com/p9c/blockdb"
 )
 
 func // serializeWriteRow serialize the current block file and offset where

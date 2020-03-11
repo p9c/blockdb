@@ -4,7 +4,7 @@ import (
 	"fmt"
 	log "github.com/p9c/logi"
 
-	"github.com/p9c/pod/pkg/chain/wire"
+	"github.com/p9c/wire"
 	database "github.com/p9c/blockdb"
 )
 

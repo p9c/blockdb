@@ -1,8 +1,8 @@
 package database
 
 import (
-	chainhash "github.com/p9c/pod/pkg/chain/hash"
-	"github.com/p9c/pod/pkg/util"
+	"github.com/p9c/chainhash"
+	"github.com/p9c/util"
 )
 
 // Cursor represents a cursor over key/value pairs and nested buckets of a

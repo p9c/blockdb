@@ -15,11 +15,12 @@ import (
 	"testing"
 	"time"
 
-	chaincfg "github.com/p9c/pod/pkg/chain/config"
-	chainhash "github.com/p9c/pod/pkg/chain/hash"
-	"github.com/p9c/pod/pkg/chain/wire"
+	"github.com/p9c/chaincfg"
+	"github.com/p9c/chainhash"
+	"github.com/p9c/util"
+	"github.com/p9c/wire"
+
 	database "github.com/p9c/blockdb"
-	"github.com/p9c/pod/pkg/util"
 )
 
 var (

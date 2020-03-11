@@ -1,14 +1,16 @@
 # database
 
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/p9c/pod/database)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/p9c/blockdb)
 
 Package database provides a block and metadata storage database.
 
 Please note that this package is intended to enable pod to support different database backends and is not something that a client can directly access as onlyone entity can have the database open at a time (for most database backends),
 and that entity will be pod.
 
-When a client wants programmatic access to the data provided by pod, they'll likely want to use the [rpcclient](https://github.com/p9c/pod/tree/master/rpcclient) package which makes use of the [JSON-RPC API](https://github.com/p9c/pod/tree/master/docs/json_rpc_api.md).
+When a client wants programmatic access to the data provided by pod, they'll likely want to use the 
+[rpcclient](https://github.com/p9c/pod/tree/master/rpcclient) package which makes use of the 
+[JSON-RPC API](https://github.com/p9c/pod/tree/master/docs/json_rpc_api.md).
 
 However, this package could be extremely useful for any applications requiring Bitcoin block storage capabilities.
 

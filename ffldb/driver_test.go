@@ -7,9 +7,10 @@ import (
 	"reflect"
 	"testing"
 
-	chaincfg "github.com/p9c/pod/pkg/chain/config"
+	"github.com/p9c/chaincfg"
+	"github.com/p9c/util"
+
 	database "github.com/p9c/blockdb"
-	"github.com/p9c/pod/pkg/util"
 )
 
 // dbType is the database type name for this driver.

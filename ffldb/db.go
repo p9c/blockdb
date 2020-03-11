@@ -18,12 +18,13 @@ import (
 	"github.com/btcsuite/goleveldb/leveldb/opt"
 	"github.com/btcsuite/goleveldb/leveldb/util"
 
-	chainhash "github.com/p9c/pod/pkg/chain/hash"
-	"github.com/p9c/pod/pkg/chain/wire"
-	database "github.com/p9c/blockdb"
+	"github.com/p9c/chainhash"
 	log "github.com/p9c/logi"
-	u "github.com/p9c/pod/pkg/util"
-	"github.com/p9c/pod/pkg/util/treap"
+	u "github.com/p9c/util"
+	"github.com/p9c/util/treap"
+	"github.com/p9c/wire"
+
+	database "github.com/p9c/blockdb"
 )
 
 const (
@@ -1078,7 +1079,7 @@ func // StoreBlock stores the provided block into the database.
 		hash:  blockHash,
 		bytes: blockBytes,
 	})
-	//log.L.Tracef("added block %s to pending blocks", blockHash)
+	// log.L.Tracef("added block %s to pending blocks", blockHash)
 	return nil
 }
 
@@ -1453,7 +1454,7 @@ func // writePendingAndCommit writes pending block data to the flat block
 	}
 	// Loop through all of the pending blocks to store and write them.
 	for _, blockData := range tx.pendingBlockData {
-		//log.L.Tracef("storing block %s", blockData.hash)
+		// log.L.Tracef("storing block %s", blockData.hash)
 		location, err := tx.db.store.writeBlock(blockData.bytes)
 		if err != nil {
 			log.L.Error(err)

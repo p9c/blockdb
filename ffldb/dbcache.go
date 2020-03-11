@@ -11,7 +11,7 @@ import (
 	"github.com/btcsuite/goleveldb/leveldb/util"
 
 	log "github.com/p9c/logi"
-	"github.com/p9c/pod/pkg/util/treap"
+	"github.com/p9c/util/treap"
 )
 
 const (
@@ -292,7 +292,7 @@ func (snap *dbCacheSnapshot) Get(key []byte) []byte {
 	// Consult the database.
 	value, err := snap.dbSnapshot.Get(key, nil)
 	if err != nil {
-		//log.L.Trace(err)
+		// log.L.Trace(err)
 		return nil
 	}
 	return value
